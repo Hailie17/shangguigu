@@ -39,6 +39,14 @@
         behavior: 'smooth'
       })
     }
+    // 获取返回顶部的按钮，监听点击事件
+    var topBtn = document.getElementById('topBtn')
+    topBtn.onclick = function() {
+      scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
   </script>
   <style>
     body {
