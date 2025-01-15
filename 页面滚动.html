@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box box1"><h2>One</h2></div>
+  <div class="box box2"><h2>Two</h2></div>
+  <div class="box box3"><h2>Three</h2></div>
+  <div class="box box4"><h2>Four</h2></div>
+  <div class="box box5"><h2>Five</h2></div>
+
+  <div class="btns">
+    <div class="btn" id="prevBtn">上一页</div>
+    <div class="btn" id="nextBtn">下一页</div>
+    <div class="btn" id="topBtn">返回顶部</div>
+  </div>
+  <script>
+    // 每个box元素设置为与视口高度一致
+    var boxs = document.querySelectorAll('.box')
+    boxs.forEach(function(ele){
+      ele.style.height = window.innerHeight + 'px'
+    })
+    // 获取下一页的按钮，监听点击事件
+    var nextBtn = document.getElementById('nextBtn')
+    nextBtn.onclick = function() {
+      scrollBy({
+        top: innerHeight,
+        behavior: 'smooth'
+      })
+    }
+  </script>
+  <style>
+    .btns {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+    }
+  </style>
+</body>
+
+
+</html>
+
