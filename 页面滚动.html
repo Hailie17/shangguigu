@@ -31,12 +31,38 @@
         behavior: 'smooth'
       })
     }
+    // 获取上一页的按钮，监听点击事件
+    var prevBtn = document.getElementById('prevBtn')
+    prevBtn.onclick = function() {
+      scrollBy({
+        top: -innerHeight,
+        behavior: 'smooth'
+      })
+    }
   </script>
   <style>
+    body {
+      margin: 0;
+    }
+    .box {
+      text-align: center;
+      overflow: hidden;
+    }
     .btns {
       position: fixed;
-      right: 0;
-      bottom: 0;
+      right: 10px;
+      bottom: 20px;
+    }
+    .btn {
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      margin-bottom: 5px;
+      color: #fff;
+      text-align: center;
+      font-size: 12px;
+      background-color: #333;
+      cursor: pointer;
     }
   </style>
 </body>
