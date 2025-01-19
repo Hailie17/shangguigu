@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 字符串转换 get-element-by-id -> getElementById
+    var str = 'get-element-by-id'
+
+    // 分割字符串
+    var arr = str.split('-')
+    
+    var newStr = ''
+
+    // 转换数组
+    arr.forEach((item,index) =>{
+      if(index === 0) {
+        newStr += item.toLowerCase()
+      }else {
+        newStr += (item[0].toUpperCase() + item.slice(1).toLowerCase())
+      }
+    })
+
+    console.log('newStr', newStr);
+    
+  </script>
+</body>
+</html>
