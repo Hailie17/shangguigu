@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日期时间字符串</title>
+</head>
+<body>
+  <script>
+    //创建日趋时间对象
+    var date = new Date()
+
+    //获取年月日时分秒
+    var y = date.getFullYear()
+    var m = date.getMonth() + 1
+    var d = date.getDate()
+    var h = date.getHours()
+    var i = date.getMinutes()
+    var s = date.getSeconds()
+
+    // 个位补0
+    m = m < 10 ? '0' + m : m
+    h = h < 10 ? '0' + h : h
+    s = s < 10 ? '0' + s : s
+    i = i < 10 ? '0' + i : i
+    d = d < 10 ? '0' + d : d
+
+
+    // 拼接时间日期字符串
+    var time = y + '-' + m + '-' + d + ' ' + h + ':' + i + ':' + s
+    console.log(time);
+    
+  </script>
+</body>
+</html>
