@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>随机取出数组的元素</title>
+</head>
+<body>
+  <script>
+    function randomArr (arr){
+      // 得到随机整数范围0~~arr.length-1
+      return arr[Math.floor(Math.random() * arr.length)]
+    }
+    console.log(randomArr([1,2,4,5,66,7]));
+    
+  </script>
+</body>
+</html>
